@@ -11,6 +11,19 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+    <!-- Popup -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-box">
+            <h2>Welcome!</h2>
+            <p>Have a great day ahead.</p>
+            <button class="close-btn" id="closeBtn">Close</button>
+        </div>
+    </div>
+    <!-- Audio Element (hidden) -->
+    <audio id="audioPlayer" style="display: none;">
+        <source src="Happy-Days(chosic.com).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
     <header>
         <div class="d-flex">
             <div class="left-h">
@@ -174,4 +187,5 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
+
 </html>

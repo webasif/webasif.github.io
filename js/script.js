@@ -1,4 +1,30 @@
- // Initialize Swiper
+//popup
+const popup = document.getElementById('popupOverlay');
+        const closeBtn = document.getElementById('closeBtn');
+        const audio = document.getElementById('audioPlayer');
+        
+        let playCount = 0;
+
+        // Close button click handler
+        closeBtn.addEventListener('click', function() {
+            // Hide the popup
+            popup.classList.add('hidden');
+            
+            // Play audio
+            audio.play();
+            playCount = 1;
+        });
+
+        // Listen for when audio ends
+        audio.addEventListener('ended', function() {
+            if (playCount < 2) {
+                // Play again if haven't played twice yet
+                audio.play();
+                playCount++;
+            }
+        });
+
+// Initialize Swiper
         const swiper = new Swiper('.projectSwiper', {
             direction: 'vertical',
             slidesPerView: 1,
@@ -47,4 +73,5 @@
 
         document.querySelector('.swiper').addEventListener('mouseleave', () => {
             swiper.autoplay.start();
+
         });

@@ -5,6 +5,10 @@
 *,*::before, *::after{
     box-sizing: border-box;
 }
+html{
+    background: #FFF;
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 45%, rgba(222, 255, 251, 1) 100%);
+}
 @font-face{
     font-family: 'lm';
     src: url(../font/LibertinusMath-Regular.ttf);
@@ -252,4 +256,5 @@ header .d-flex{
 }
 footer{
     padding: 50px 0;
+
 }
